@@ -1,0 +1,49 @@
+@import "../../styles/config";
+
+.btn {
+    padding: .75em 1.5em;
+    border-radius: 5em;
+    cursor: pointer;
+
+    transition: all 200ms ease;
+}
+
+.boxShadow {
+	box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+}
+
+// HANDLE VARIANTS
+.primary {
+    background-color: $primary;
+    color: $on-primary;
+    border: 1px solid $primary;
+
+    &:hover {
+        background-color: $background;
+        color: $primary;
+    }
+}
+
+.primaryOutline {
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+    backdrop-filter: blur(15px);
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+// HANDLE FONT SIZE
+.sm {
+    font-size: .8rem;
+}
+
+.md {
+    font-size: 1rem;
+}
+
+.lg {
+    font-size: 1.5em;
+}
