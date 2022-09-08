@@ -25,7 +25,7 @@
     "lint:fix": "./node_modules/.bin/eslint --fix '.'",
     "format": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "prepare": "./node_modules/.bin/husky install",
-    "lint-staged": "./node_modules/.bin/lint-staged"
+    "precommit": "./node_modules/.bin/lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -58,8 +58,5 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "./node_modules/.bin/eslint --fix"
   }
 }
