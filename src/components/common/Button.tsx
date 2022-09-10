@@ -24,7 +24,7 @@ const Button = ({ label, size, variant, boxShadow, onClick }: ButtonProps) => {
   return (
     <button
       className={`${size && SIZES[size]} ${variant ? VARIANTS[variant] : VARIANTS.primary} ${
-        boxShadow && styles.boxShadow
+        boxShadow ? styles.boxShadow : ''
       } ${styles.btn}`}
       onClick={onClick}
     >

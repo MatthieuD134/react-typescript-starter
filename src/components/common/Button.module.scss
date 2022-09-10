@@ -1,6 +1,7 @@
 @import "../../styles/config";
 
 .btn {
+    margin: 1em;
     padding: .75em 1.5em;
     border-radius: 5em;
     cursor: pointer;
@@ -14,21 +15,25 @@
 
 // HANDLE VARIANTS
 .primary {
-    background-color: $primary;
-    color: $on-primary;
-    border: 1px solid $primary;
+    border: 1px solid;
+
+    @include theme-aware('background-color', 'primary');
+    @include theme-aware('color', 'on-primary');
+    @include theme-aware('border-color', 'primary');
 
     &:hover {
-        background-color: $background;
-        color: $primary;
+        background-color: transparent;
+        @include theme-aware('color', 'on-background');
     }
 }
 
 .primaryOutline {
     background-color: transparent;
-    color: $primary;
-    border: 1px solid $primary;
+    border: 1px solid;
     backdrop-filter: blur(15px);
+
+    @include theme-aware('border-color', 'primary');
+    @include theme-aware('color', 'primary');
 
     &:hover {
         border-color: transparent;
