@@ -26,11 +26,11 @@ function App() {
           Learn React
         </a>
         <Button
-          label='Change theme'
-          size='md'
           variant='primary'
           onClick={() => (theme === THEMES.LIGHT ? setTheme(THEMES.DARK) : setTheme(THEMES.LIGHT))}
-        />
+        >
+          Change theme
+        </Button>
       </header>
     </div>
   );

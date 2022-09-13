@@ -23,7 +23,7 @@
 
     &:hover {
         background-color: transparent;
-        @include theme-aware('color', 'on-background');
+        @include theme-aware('color', 'primary');
     }
 }
 
@@ -36,7 +36,8 @@
     @include theme-aware('color', 'primary');
 
     &:hover {
-        border-color: transparent;
+        @include theme-aware('background-color', 'primary');
+        @include theme-aware('color', 'on-primary');
     }
 }
 
