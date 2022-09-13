@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import styles from './App.module.scss';
-import Button from './components/common/Button';
+import Button from './components/common/Button/Button';
 
 const THEMES = {
   LIGHT: 'theme_light',

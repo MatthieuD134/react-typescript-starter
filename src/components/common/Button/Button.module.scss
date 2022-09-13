@@ -1,4 +1,4 @@
-@import "../../styles/config";
+@import "../../../styles/config";
 
 .btn {
     margin: 1em;
@@ -21,7 +21,7 @@
     @include theme-aware('color', 'on-primary');
     @include theme-aware('border-color', 'primary');
 
-    &:hover {
+    &:hover, &:focus {
         background-color: transparent;
         @include theme-aware('color', 'primary');
     }
@@ -35,21 +35,8 @@
     @include theme-aware('border-color', 'primary');
     @include theme-aware('color', 'primary');
 
-    &:hover {
+    &:hover, &:focus {
         @include theme-aware('background-color', 'primary');
         @include theme-aware('color', 'on-primary');
     }
-}
-
-// HANDLE FONT SIZE
-.sm {
-    font-size: .8rem;
-}
-
-.md {
-    font-size: 1rem;
-}
-
-.lg {
-    font-size: 1.5em;
 }
