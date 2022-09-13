@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import styles from './App.module.scss';
 import Button from './components/common/Button/Button';
 
@@ -10,28 +9,22 @@ const THEMES = {
 
 function App() {
   const [theme, setTheme] = useState(THEMES.LIGHT);
+
+  const handleChangeTheme = (theme: string) => {
+    document.body.className = theme;
+    setTheme(theme);
+  };
   return (
-    <div className={`${styles.App} ${theme}`}>
-      <header className={styles.AppHeader}>
-        <img src={logo} className={styles.AppLogo} alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={styles.AppLink}
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-        <Button
-          variant='primary'
-          onClick={() => (theme === THEMES.LIGHT ? setTheme(THEMES.DARK) : setTheme(THEMES.LIGHT))}
-        >
-          Change theme
-        </Button>
-      </header>
+    <div className={`${styles.App}`}>
+      <h1>Website template with React</h1>
+      <Button
+        variant='primary'
+        onClick={() =>
+          theme === THEMES.LIGHT ? handleChangeTheme(THEMES.DARK) : handleChangeTheme(THEMES.LIGHT)
+        }
+      >
+        Change theme
+      </Button>
     </div>
   );
 }
