@@ -21,7 +21,7 @@
     @include theme-aware('color', 'on-primary');
     @include theme-aware('border-color', 'primary');
 
-    &:hover, &:focus {
+    &:hover, &:active {
         background-color: transparent;
         @include theme-aware('color', 'primary');
     }
@@ -35,7 +35,7 @@
     @include theme-aware('border-color', 'primary');
     @include theme-aware('color', 'primary');
 
-    &:hover, &:focus {
+    &:hover, &:active {
         @include theme-aware('background-color', 'primary');
         @include theme-aware('color', 'on-primary');
     }
