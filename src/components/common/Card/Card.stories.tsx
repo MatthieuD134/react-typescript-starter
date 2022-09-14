@@ -15,7 +15,6 @@ export default {
 const Template: ComponentStory<typeof Card> = (args) => (
   <div className={THEMES.LIGHT}>
     <Card {...args} />
-    <span>lol</span>
   </div>
 );
 
