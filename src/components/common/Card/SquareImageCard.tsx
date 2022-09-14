@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import styles from './SquareImageCard.module.scss';
 
 interface SquareImageCardProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   image: string;
   imageAlt: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  key?: React.Key;
   disableTabNav?: boolean;
   tiltHoverEffect?: boolean;
 }
@@ -15,12 +16,13 @@ const SquareImageCard = ({
   image,
   imageAlt,
   onClick,
+  key,
   disableTabNav = false,
   tiltHoverEffect = false,
 }: SquareImageCardProps) => {
   const [imgLoaded, setImageLoaded] = useState(false);
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.cardContainer} key={key || null}>
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
