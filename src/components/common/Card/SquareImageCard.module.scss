@@ -31,7 +31,7 @@
             top: 0;
 
             &:hover ~ .card {
-                rotate: 1 1 0 10deg;
+                rotate: 1 -1 0 10deg;
             }
         }
         &:nth-child(2) {
@@ -39,7 +39,7 @@
             top: 0;
             
             &:hover ~ .card {
-                rotate: 1 .5 0 10deg;
+                rotate: 1 -.5 0 10deg;
             }
         }
         &:nth-child(3) {
@@ -55,7 +55,7 @@
             top: 0;
 
             &:hover ~ .card {
-                rotate: 1 -.5 0 10deg;
+                rotate: 1 .5 0 10deg;
             }
         }
         &:nth-child(5) {
@@ -63,7 +63,7 @@
             top: 0;
 
             &:hover ~ .card {
-                rotate: 1 -1 0 10deg;
+                rotate: 1 1 0 10deg;
             }
         }
 
@@ -72,7 +72,7 @@
             top: 20%;
 
             &:hover ~ .card {
-                rotate: .5 1 0 10deg;
+                rotate: .5 -1 0 10deg;
             }
         }
         &:nth-child(7) {
@@ -80,7 +80,7 @@
             top: 20%;
             
             &:hover ~ .card {
-                rotate: .5 .5 0 10deg;
+                rotate: .5 -.5 0 10deg;
             }
         }
         &:nth-child(8) {
@@ -96,7 +96,7 @@
             top: 20%;
 
             &:hover ~ .card {
-                rotate: .5 -.5 0 10deg;
+                rotate: .5 .5 0 10deg;
             }
         }
         &:nth-child(10) {
@@ -104,7 +104,7 @@
             top: 20%;
 
             &:hover ~ .card {
-                rotate: .5 -1 0 10deg;
+                rotate: .5 1 0 10deg;
             }
         }
 
@@ -113,7 +113,7 @@
             top: 40%;
 
             &:hover ~ .card {
-                rotate: 0 1 0 10deg;
+                rotate: 0 -1 0 10deg;
             }
         }
         &:nth-child(12) {
@@ -121,7 +121,7 @@
             top: 40%;
             
             &:hover ~ .card {
-                rotate: 0 .5 0 10deg;
+                rotate: 0 -.5 0 10deg;
             }
         }
         &:nth-child(13) {
@@ -137,7 +137,7 @@
             top: 40%;
 
             &:hover ~ .card {
-                rotate: 0 -.5 0 10deg;
+                rotate: 0 .5 0 10deg;
             }
         }
         &:nth-child(15) {
@@ -145,7 +145,7 @@
             top: 40%;
 
             &:hover ~ .card {
-                rotate: 0 -1 0 10deg;
+                rotate: 0 1 0 10deg;
             }
         }
 
@@ -154,7 +154,7 @@
             top: 60%;
 
             &:hover ~ .card {
-                rotate: -.5 1 0 10deg;
+                rotate: -.5 -1 0 10deg;
             }
         }
         &:nth-child(17) {
@@ -162,7 +162,7 @@
             top: 60%;
             
             &:hover ~ .card {
-                rotate: -.5 .5 0 10deg;
+                rotate: -.5 -.5 0 10deg;
             }
         }
         &:nth-child(18) {
@@ -178,7 +178,7 @@
             top: 60%;
 
             &:hover ~ .card {
-                rotate: -.5 -.5 0 10deg;
+                rotate: -.5 .5 0 10deg;
             }
         }
         &:nth-child(20) {
@@ -186,7 +186,7 @@
             top: 60%;
 
             &:hover ~ .card {
-                rotate: -.5 -1 0 10deg;
+                rotate: -.5 1 0 10deg;
             }
         }
 
@@ -195,7 +195,7 @@
             top: 80%;
 
             &:hover ~ .card {
-                rotate: -1 1 0 10deg;
+                rotate: -1 -1 0 10deg;
             }
         }
         &:nth-child(22) {
@@ -203,7 +203,7 @@
             top: 80%;
             
             &:hover ~ .card {
-                rotate: -1 .5 0 10deg;
+                rotate: -1 -.5 0 10deg;
             }
         }
         &:nth-child(23) {
@@ -219,7 +219,7 @@
             top: 80%;
 
             &:hover ~ .card {
-                rotate: -1 -.5 0 10deg;
+                rotate: -1 .5 0 10deg;
             }
         }
         &:nth-child(25) {
@@ -227,7 +227,7 @@
             top: 80%;
 
             &:hover ~ .card {
-                rotate: -1 -1 0 10deg;
+                rotate: -1 1 0 10deg;
             }
         }
     }
