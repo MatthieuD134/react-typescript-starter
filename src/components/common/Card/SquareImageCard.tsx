@@ -22,7 +22,7 @@ const SquareImageCard = ({
 }: SquareImageCardProps) => {
   const [imgLoaded, setImageLoaded] = useState(false);
   return (
-    <div className={styles.cardContainer} key={key || null}>
+    <div className={styles.cardContainer} key={key || null} tabIndex={disableTabNav ? -1 : 0}>
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
@@ -52,7 +52,7 @@ const SquareImageCard = ({
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
       {tiltHoverEffect && <div className={styles.tiltBox} />}
-      <div className={`${styles.card}`} tabIndex={disableTabNav ? -1 : 0} onClick={onClick}>
+      <div className={`${styles.card}`} onClick={onClick}>
         <img
           className={`${styles.cardImg} ${imgLoaded ? styles.imgLoaded : styles.imgLoading}`}
           src={image}

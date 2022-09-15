@@ -35,7 +35,7 @@
         }
     }
 
-    .progressBar {
+    .progressBarContainer {
         position: absolute;
         left: 0;
         right: 0;
@@ -43,19 +43,28 @@
         display: flex;
         justify-content: center;
 
-        & .progressItem {
-            margin: 5px;
-            height: 10px;
-            aspect-ratio: 1;
-            border-radius: 10px;
-            transition: all 200ms ease-in-out;
-            cursor: pointer;
-
-            @include theme-aware('background-color', 'primary');
-        }
-
-        & .progressItemActive {
-            aspect-ratio: 3;
+        & .progressBar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+            
+    
+            & .progressItem {
+                margin: 2px;
+                height: 10px;
+                aspect-ratio: 1;
+                border-radius: 10px;
+                transition: all 200ms ease-in-out;
+                cursor: pointer;
+    
+                @include theme-aware('background-color', 'primary');
+            }
+    
+            & .progressItemActive {
+                aspect-ratio: 3;
+            }
         }
     }
+    
 }

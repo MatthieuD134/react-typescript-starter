@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Carousel.module.scss';
 
 interface CarouselProps {
@@ -8,6 +8,9 @@ interface CarouselProps {
   itemStyle?: string;
   itemActiveStyle?: string;
   itemInactiveStyle?: string;
+  onActiveItemChanged?: (activeItem: number) => void;
+  hideProgessionBar?: boolean;
+  automaticSwipe?: boolean;
 }
 
 const Carousel = ({
@@ -17,10 +20,14 @@ const Carousel = ({
   itemStyle = styles.item,
   itemActiveStyle = styles.active,
   itemInactiveStyle = styles.inactive,
+  onActiveItemChanged,
+  hideProgessionBar = false,
+  automaticSwipe = true,
 }: CarouselProps) => {
   const [activeItem, setActiveItem] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
+  const [everTouched, setEverTouched] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
@@ -28,6 +35,7 @@ const Carousel = ({
   const minSwipeDistance = 50;
 
   const onTouchStart: React.TouchEventHandler<HTMLDivElement> = (e) => {
+    !everTouched && setEverTouched(true);
     setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -48,6 +56,22 @@ const Carousel = ({
     setTouchEnd(null);
     setTouchStart(null);
   };
+
+  // trigger when activeItem is changed
+  useEffect(() => {
+    onActiveItemChanged && onActiveItemChanged(activeItem);
+  }, [activeItem]);
+
+  // handle the auto-swiping
+  useEffect(() => {
+    if (automaticSwipe && !everTouched) {
+      const timer = setTimeout(
+        () => setActiveItem(activeItem + 1 < listOfchildren.length ? activeItem + 1 : 0),
+        3000
+      );
+      return () => clearTimeout(timer);
+    }
+  }, [everTouched, activeItem]);
 
   return (
     <div className={styles.container}>
@@ -73,23 +97,30 @@ const Carousel = ({
                 activeItem === index ? itemActiveStyle : itemInactiveStyle
               }`}
               key={index}
-              onClick={() => setActiveItem(index)}
+              onFocus={() => {
+                setActiveItem(index);
+                setEverTouched(true);
+              }}
             >
               {child}
             </div>
           ))}
         </div>
-        <span className={styles.progressBar}>
-          {listOfchildren.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.progressItem} ${
-                activeItem === index ? styles.progressItemActive : styles.progressItemInactive
-              }`}
-              onClick={() => setActiveItem(index)}
-            />
-          ))}
-        </span>
+        {!hideProgessionBar && (
+          <span className={styles.progressBarContainer}>
+            <span className={styles.progressBar}>
+              {listOfchildren.map((item, index) => (
+                <div
+                  key={index}
+                  className={`${styles.progressItem} ${
+                    activeItem === index ? styles.progressItemActive : styles.progressItemInactive
+                  }`}
+                  onClick={() => setActiveItem(index)}
+                />
+              ))}
+            </span>
+          </span>
+        )}
       </div>
     </div>
   );
