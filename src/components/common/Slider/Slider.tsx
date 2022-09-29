@@ -4,7 +4,7 @@ import styles from './Slider.module.scss';
 
 export interface SliderProps {
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Slider = ({ title, children }: SliderProps) => {
