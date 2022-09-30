@@ -96,6 +96,10 @@ const Slider = ({ title, children }: SliderProps) => {
               fill='#C4C4C4'
             />
           </svg>
+
+          <button className={styles.closeBtn} onClick={() => setOpen(false)}>
+            close
+          </button>
         </div>
       </div>
     </>

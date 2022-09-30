@@ -10,6 +10,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "emailjs-com": "^3.2.0",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -85,6 +87,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
-    "webpack": "^5.74.0"
+    "react-icons": "^4.4.0",
+    "webpack": "^5.74.0",
+    "yup": "^0.32.11"
   }
 }

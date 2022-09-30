@@ -1,0 +1,47 @@
+@import "../../styles/config";
+
+.form {
+    position: relative;
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.submitBtn {
+    width: 100%;
+    margin: 1em 0;
+    font-size: 1.2rem;
+    padding: .75em;
+    border-radius: 15px;
+    cursor: pointer;
+
+    @include theme-aware('border-color', 'primary');
+    @include theme-aware('background-color', 'primary');
+    @include theme-aware('color', 'on-primary');
+
+    border: 2px solid;
+
+
+    transition: all 200ms ease-in-out;
+
+
+    &:hover, &:focus {
+        background-color: transparent;
+        @include theme-aware('color', 'primary');
+    }
+
+    &:disabled {
+        @include theme-aware('border-color', 'on-surface');
+        @include theme-aware('background-color', 'on-surface');
+        @include theme-aware('color', 'background');
+        cursor: auto;
+
+        opacity: .6;
+
+        &:hover {
+            @include theme-aware('border-color', 'on-surface');
+            @include theme-aware('background-color', 'on-surface');
+            @include theme-aware('color', 'background');
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.socialTitle {
+    font-size: 1.2rem;
+    opacity: .6;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+
+    & > a {
+        font-size: 2rem;
+        opacity: .6;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+        margin: 0 .25em;
+
+        &:focus, &:hover {
+            opacity: 1;
+        }
+    }
+}

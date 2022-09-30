@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styles from './App.module.scss';
 import Button from './components/common/Button/Button';
 import Slider from './components/common/Slider/Slider';
+import ContactForm from './components/ContactForm';
+import SocialSection from './components/ContactForm/SocialSection';
 
 const THEMES = {
   LIGHT: 'theme_light',
@@ -30,7 +32,10 @@ function App() {
       >
         Change theme
       </Button>
-      <Slider title='CONTACT ME'></Slider>
+      <Slider title='CONTACT ME'>
+        <ContactForm />
+        <SocialSection />
+      </Slider>
     </div>
   );
 }
