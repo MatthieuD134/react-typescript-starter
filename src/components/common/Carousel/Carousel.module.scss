@@ -10,19 +10,26 @@
     display: flex;
 
     aspect-ratio: 1;
+    width: 90vw;
+    
     min-width: 200px;
     min-height: 200px;
     max-width: 350px;
     max-height: 350px;
+    touch-action: none;
     
 
     & .slider {
         display: flex;
-        transition: 100ms ease-out;
+        transition: all 100ms ease-out;
 
         & .item {
-            aspect-ratio: 1;
-            padding: 1em;
+            width: 90vw;
+            height: 90vw;
+            min-width: 200px;
+            min-height: 200px;
+            max-width: 350px;
+            max-height: 350px;
             display: flex;
             justify-content: center;
             align-items: center;

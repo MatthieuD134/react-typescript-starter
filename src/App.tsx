@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './App.module.scss';
 import Button from './components/common/Button/Button';
+import ProjectSection from './components/common/ProjectSection';
 import Slider from './components/common/Slider/Slider';
 import ContactForm from './components/ContactForm';
 import SocialSection from './components/ContactForm/SocialSection';
@@ -32,6 +33,9 @@ function App() {
       >
         Change theme
       </Button>
+
+      <ProjectSection />
+
       <Slider title='CONTACT ME'>
         <ContactForm />
         <SocialSection />

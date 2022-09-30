@@ -52,14 +52,14 @@ const Slider = ({ title, children }: SliderProps) => {
             ? open
               ? {
                   transition: 'none',
-                  translate: `0 calc(10px + ${touchEnd}px - ${touchStart}px)`,
+                  translate: `0 calc(max(10px, calc(15vh + 100% - 100vh)) + ${touchEnd}px - ${touchStart}px)`,
                 }
               : {
                   transition: 'none',
                   translate: `0 calc(100% - 3em + ${touchEnd}px - ${touchStart}px)`,
                 }
             : open
-            ? { translate: '0 10px' }
+            ? { translate: '0 max(10px, calc(15vh + 100% - 100vh))' }
             : { translate: '0 calc(100% - 3em)' }
         }
       >

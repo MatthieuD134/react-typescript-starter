@@ -3,8 +3,6 @@
 .App {
   text-align: center;
   overflow: auto;
-  height: 100vh;
   
-  @include theme-aware("background-color", "background");
   @include theme-aware("color", "on-background");
 }

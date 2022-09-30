@@ -81,6 +81,7 @@ const Carousel = ({
           style={
             touchStart && touchEnd
               ? {
+                  transition: 'none',
                   translate: `calc((${
                     ref.current && ref.current.clientWidth
                   }px) * -${activeItem} + ${touchEnd}px - ${touchStart}px)`,

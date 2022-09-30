@@ -1,0 +1,59 @@
+@import "../../../styles/config";
+
+.projectSection {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.infoSection {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 70px;
+    width: 90%;
+    max-width: 600px;
+    text-align: start;
+
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid;
+    @include theme-aware('border-color', 'on-background');
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     top: .5em;
+    //     right: .5em;
+    //     bottom:  .5em;
+    //     left: .5em;
+    //     border: 1px solid;
+    //     border-radius: 13px;
+    //     @include theme-aware('border-color', 'on-background');
+    // }
+
+    & > div {
+        padding: 1em;
+    }
+
+    & h2 {
+        margin: 0;
+    }
+
+    & .openLink {
+        position: absolute;
+        font-size: 2rem;
+        top: .5em;
+        right: .5em;
+        cursor: pointer;
+
+        @include theme-aware('color', 'on-surface');
+        opacity: .6;
+
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+}
